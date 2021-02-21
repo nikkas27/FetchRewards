@@ -30,7 +30,7 @@ def check_similarity(sample_1, sample_2, sample_3):
             similarity_text = jaccard_similarity(content_list[1], content_list[2])
             similarity_list.append(similarity_text)
         
-    with open('similarity matrix.csv', 'a') as input:
+    with open('similarity matrix.csv', 'a', newline = '') as input:
         writer = csv.writer(input)
         writer.writerow(similarity_list)
 
@@ -59,12 +59,18 @@ def similarity():
         check_similarity(text_1, text_2, text_3)
         with open('similarity matrix.csv', 'r') as output:
             read = csv.reader(output)
+            rows = list(read)
+            length = len(rows)
+            counter = 1
+        with open('similarity matrix.csv', 'r', encoding='utf-8') as output:
+            read = csv.reader(output)
             for row in read:
-                one_comp = row[0]
-                two_comp = row[1]
-                three_comp = row[2]
-                print(one_comp, two_comp, three_comp)
-                break
+                if counter == length:
+                    one_comp = row[0]
+                    two_comp = row[1]
+                    three_comp = row[2]
+                    break
+                counter+=1
     return render_template('result.html', First=one_comp, Second=two_comp, Third=three_comp)
 
 
