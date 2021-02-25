@@ -6,7 +6,7 @@ Step 1: Make sure you have Python installed on your testing computer.
 
 Step 2: Check to see if the Pip is already installed. If not, first install pip for library installation.
 
-Step 3: Pip install the libraries: csv and flask for reading and writing to a csv file and managing web based application framework respectively.
+Step 3: Pip install the libraries: csv and flask for reading and writing to a csv file and managing web based application framework respectively.</br>
 pip install flask </br>
 pip install wtforms </br>
 
