@@ -7,11 +7,11 @@ Step 1: Make sure you have Python installed on your testing computer.
 Step 2: Check to see if the Pip is already installed. If not, first install pip for library installation.
 
 Step 3: Pip install the libraries: csv and flask for reading and writing to a csv file and managing web based application framework respectively.
-pip install flask
-pip install wtforms
+pip install flask </br>
+pip install wtforms </br>
 
 Step 4: Run similarity.py file from Command Prompt.
-Python similarity.py
+Python similarity.py </br>
 
 Step 5: Open the web link displayed on your command prompt and Enter your text content in each of the text area displayed.
 
